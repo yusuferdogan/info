@@ -1,0 +1,18 @@
+//protoc --proto_path=. --go_out=. --go_opt=paths=source_relative stream.proto
+syntax = "proto3";
+package pb;
+
+option go_package = "info/pkg/infrastructure/proto/pb";
+
+message Stream{
+    Action      action = 1;
+}
+
+
+
+message Action{
+    string id = 1;
+    string actionType = 2;
+    string category = 3;
+}
+
