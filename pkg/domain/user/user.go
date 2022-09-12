@@ -61,7 +61,7 @@ func md(m metadata.MD, key string) string {
 }
 
 func FromContext(ctx context.Context) *User {
-	c := ctx.Value("tenant")
+	c := ctx.Value("user")
 	if c != nil {
 		u, ok := c.(*User)
 		if ok {
